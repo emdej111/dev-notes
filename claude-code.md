@@ -1,29 +1,5 @@
 # Claude Code
-
-> Cheat sheet for Claude Code CLI — commands, shortcuts and workflows.
-
----
-
-## Getting Started
-
-```bash
-claude                    # start Claude Code
-claude --version          # check version
-```
-
----
-
-## Basic Commands
-
-| Command | Description |
-|---------|-------------|
-| `/help` | List all available commands |
-| `/init` | Create a CLAUDE.md file |
-| `/model` | Switch model (Sonnet/Opus) |
-| `/clear` | Clear conversation |
-| `/exit` | Exit Claude Code |
-
----
+## ANTHROPIC lessons
 
 # Steering Long Sessions
 
