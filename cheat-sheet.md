@@ -21,6 +21,18 @@ claude --version          # check installed version
 /exit                     # exit Claude Code session
 ```
 
+## Modes
+
+**How:** press `Shift + Tab` to cycle through modes
+
+| Mode | Status bar | Description | When to use |
+|------|------------|-------------|-------------|
+| **Accept edits** | `⏵⏵ accept edits on` | Claude automatically accepts all file changes | Default mode — Claude saves changes without asking |
+| **Plan** | `⏸ plan mode on` | Claude reads code in read-only mode and returns a plan — no changes made | Before any complex or long task — always start here |
+| **Auto** | `⏵⏵ auto mode on` | Claude works autonomously without asking for permission | You trust Claude with the task, want hands-off execution |
+| **Manual** | `⏸ manual mode on` | Claude asks permission before every action | Sensitive code, unfamiliar codebase, want full control |
+
+> 💡 Best practice: start in **Plan** mode to review what Claude intends to do, then switch to **Auto** or **Manual** to execute
 ---
 
 ## Plan Mode
