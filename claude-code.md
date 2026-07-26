@@ -25,7 +25,7 @@ claude --version          # check version
 
 ---
 
-## Steering Long Sessions
+# Steering Long Sessions
 
 Two core habits:
 1. **Scope the work** before Claude starts
