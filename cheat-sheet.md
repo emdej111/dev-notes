@@ -59,8 +59,7 @@ Shift + Tab               # toggle plan mode on/off
 
 ---
 
-## Compact
-
+### Compact
 **When:** context window is getting full during a long session
 **How:** run in Claude Code prompt, always add an instruction
 
@@ -72,7 +71,7 @@ Shift + Tab               # toggle plan mode on/off
 
 ---
 
-## Rewind
+### Rewind
 
 **When:** Claude went in the wrong direction and you want to go back
 **How:** double tap `Escape` on an empty prompt
