@@ -1,5 +1,4 @@
-# Claude Code
-## ANTHROPIC lessons
+# Claude Code -- ANTHROPIC lessons
 
 # Steering Long Sessions
 
