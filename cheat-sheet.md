@@ -33,7 +33,6 @@ claude --version          # check installed version
 | **Manual** | `⏸ manual mode on` | Claude asks permission before every action | Sensitive code, unfamiliar codebase, want full control |
 
 ### Accept edits
-### Accept edits
 ![Accept edits mode](assets/mode-accept-edits.jpeg)
 
 ### Plan
