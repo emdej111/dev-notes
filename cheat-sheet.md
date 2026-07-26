@@ -32,6 +32,18 @@ claude --version          # check installed version
 | **Auto** | `⏵⏵ auto mode on` | Claude works autonomously without asking for permission | You trust Claude with the task, want hands-off execution |
 | **Manual** | `⏸ manual mode on` | Claude asks permission before every action | Sensitive code, unfamiliar codebase, want full control |
 
+### Accept edits
+![Accept edits mode](assets/mode-accept-edits.png)
+
+### Plan
+![Plan mode](assets/mode-plan.png)
+
+### Auto
+![Auto mode](assets/mode-auto.png)
+
+### Manual
+![Manual mode](assets/mode-manual.png)
+
 > 💡 Best practice: start in **Plan** mode to review what Claude intends to do, then switch to **Auto** or **Manual** to execute
 ---
 
