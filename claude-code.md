@@ -1,4 +1,4 @@
-# Claude Code 🤖
+# Claude Code
 
 > Cheat sheet for Claude Code CLI — commands, shortcuts and workflows.
 
@@ -31,13 +31,21 @@ Two core habits:
 1. **Scope the work** before Claude starts
 2. **Steer it** while it runs
 
-### Plan Mode
+### 1. Scope the work first with plan mode
+
 - Before Claude writes a single line, get it to lay out a plan
 - In plan mode, Claude works in **read-only** — reads code, figures out what needs to change, hands you a plan
 - Actually read the plan — the more thorough the plan, the fewer surprises
 - Iterate on the plan before Claude starts executing
 
-### Compact
+```bash
+Shift + Tab               # toggle plan mode on/off
+```
+
+### 2. Steer while Claude works
+
+#### Compact
+
 - Summarizes conversation, uses summary as new context, deletes old messages
 - Frees up context window so Claude can keep going
 - ⚠️ **Never run `/compact` on its own** — something important might get dropped
@@ -48,7 +56,8 @@ Two core habits:
 # e.g. /compact focus on the --version flag implementation
 ```
 
-### Rewind
+#### Rewind
+
 - Takes you back to your last checkpoint
 - Every user prompt creates a checkpoint you can revert to
 - Open menu: **double tap Escape on an empty prompt**
@@ -65,7 +74,10 @@ Two core habits:
 
 ## Autonomous Mode
 
-### Goal
+### Let Claude run more autonomously
+
+#### Goal
+
 - Sets a completion condition — Claude keeps working until a fast evaluator confirms conditions are met
 - ⚠️ Condition must be checkable from Claude's actual output (e.g. test results)
 
@@ -75,7 +87,8 @@ Two core habits:
 /goal clear                       # cancel active goal
 ```
 
-### Loop
+#### Loop
+
 - Runs a prompt on an interval between turns
 - Use to pull something external (CI run, deploy) and act when state changes
 
@@ -96,7 +109,7 @@ Escape                            # stop loop
 /worktree                         # manage worktrees
 ```
 
-> 💡 Add a `.worktreeinclude` file at repo root to list git-ignored files (e.g. `.env`) to copy into each worktree
+> Add a `.worktreeinclude` file at repo root to list git-ignored files (e.g. `.env`) to copy into each worktree
 
 ---
 
