@@ -53,9 +53,6 @@ claude --version          # check installed version
 
 </div>
 
----
-
----
 ## Scope the work first with plan mode
 
 ### Plan Mode
