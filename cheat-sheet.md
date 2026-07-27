@@ -151,6 +151,7 @@ We asked Claude to refactor a function. It went off track and started rewriting 
 Everything so far assumes you are hands-on, watching and correcting. Goal and Loop let Claude work with less supervision.
 
 ---
+### Goal
 
 **What it does:** sets a completion condition — Claude keeps working across turns until a fast evaluator confirms the condition is met. It won't stop just because it thinks it's finished.
 
