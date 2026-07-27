@@ -51,7 +51,7 @@ claude --version          # check installed version
 
 ---
 ## Scope the work first with plan mode
---
+
 ### Plan Mode
 
 **When:** before starting any long or complex task
@@ -65,7 +65,7 @@ Shift + Tab               # toggle plan mode on/off
 
 ---
 ## Steer while Claude works
----
+
 ### Compact
 **When:** context window is getting full during a long session
 **How:** run in Claude Code prompt, always add an instruction
@@ -98,7 +98,7 @@ Escape + Escape           # open Rewind menu
 
 ---
 ## Let Claude run more autonomously
----
+
 
 ### Goal
 
@@ -124,7 +124,7 @@ Escape                    # stop loop
 
 ---
 ## Run parallel work with worktrees
----
+
 
 **When:** running multiple Claude agents on the same codebase in parallel
 **How:** each agent gets its own independent file tree — no conflicts
@@ -136,14 +136,15 @@ Escape                    # stop loop
 
 ---
 ## Putting it together
----
+
 Handling long Claude Code sessions comes down to a handful of habits:
 
-Scope your work first, then steer.
-Direct your compaction so the summary keeps what matters.
-Use the rewind menu to course correct when Claude drifts.
-Set a goal when you can describe "done" better than you can describe the steps.
-Run parallel work in worktrees.
+1. Scope your work first, then steer.
+2. Direct your compaction so the summary keeps what matters.
+3. Use the rewind menu to course correct when Claude drifts.
+4. Set a goal when you can describe "done" better than you can describe the steps.
+5. Run parallel work in worktrees.
+   
 Do that, and you can trust a long run without babysitting every step of it.
 
 
