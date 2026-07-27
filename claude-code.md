@@ -2,10 +2,6 @@
 
 ## Steering Long Sessions
 
-Two core habits:
-1. **Scope the work** before Claude starts
-2. **Steer it** while it runs
-
 ### Modes
 
 **How:** press `Shift + Tab` to cycle through modes
@@ -29,10 +25,16 @@ Two core habits:
 #### Manual
 ![Manual mode](assets/mode-manual.jpeg)
 
+
+Two core habits:
+1. **Scope the work** before Claude starts
+2. **Steer it** while it runs
+
+
 > 💡 Best practice: start in **Plan** mode to review what Claude intends to do, then switch to **Auto** or **Manual** to execute
 ---
 
-### 1. Scope the work first with plan mode
+### 1. Scope the work** before Claude starts
 
 - Before Claude writes a single line, get it to lay out a plan
 - In plan mode, Claude works in **read-only** — reads code, figures out what needs to change, hands you a plan
@@ -43,7 +45,7 @@ Two core habits:
 Shift + Tab               # toggle plan mode on/off
 ```
 
-### 2. Steer while Claude works
+### 2. Steer it** while it runs
 
 #### Compact
 
@@ -73,9 +75,9 @@ Shift + Tab               # toggle plan mode on/off
 
 ---
 
-## Autonomous Mode
+### Autonomous Mode
 
-### Let Claude run more autonomously
+#### Let Claude run more autonomously
 
 #### Goal
 
@@ -100,7 +102,7 @@ Escape                            # stop loop
 
 ---
 
-## Parallel Work — Worktrees
+### Parallel Work — Worktrees
 
 - When running multiple agents on the same codebase, each gets its own **independent file tree**
 - Agents can't overwrite each other's changes
