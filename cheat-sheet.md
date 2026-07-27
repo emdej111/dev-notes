@@ -268,5 +268,11 @@ Handling long Claude Code sessions comes down to a handful of habits:
 Do that, and you can trust a long run without babysitting every step of it.
 
 
+<div align="center" style="background-color: #1a1a2e; padding: 20px; border-radius: 10px; border: 2px solid #e67e22;">
+
+# A CLAUDE.md That Follows
+
+</div>
+
 
 *Last updated: July 2026*
