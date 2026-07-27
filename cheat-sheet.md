@@ -47,7 +47,12 @@ claude --version          # check installed version
 > 💡 Best practice: start in **Plan** mode to review what Claude intends to do, then switch to **Auto** or **Manual** to execute
 ---
 
-## Plan Mode
+
+
+---
+## Scope the work first with plan mode
+--
+### Plan Mode
 
 **When:** before starting any long or complex task
 **How:** toggle on before giving Claude the task
@@ -57,8 +62,10 @@ Shift + Tab               # toggle plan mode on/off
 ```
 > Claude reads code in read-only mode and returns a plan to review before doing anything
 
----
 
+---
+## Steer while Claude works
+---
 ### Compact
 **When:** context window is getting full during a long session
 **How:** run in Claude Code prompt, always add an instruction
@@ -88,9 +95,12 @@ Escape + Escape           # open Rewind menu
 | Summarize from here | Free up space after a side conversation |
 | Summarize up to here | Compress a long setup phase, keep recent work |
 
+
+---
+## Let Claude run more autonomously
 ---
 
-## Goal
+### Goal
 
 **When:** you can describe what "done" looks like better than the steps to get there
 **How:** run in Claude Code prompt — condition must be checkable from Claude's output
@@ -102,7 +112,7 @@ Escape + Escape           # open Rewind menu
 
 ---
 
-## Loop
+### Loop
 
 **When:** you need Claude to check something external repeatedly (CI run, deploy status)
 **How:** run in Claude Code prompt, Claude runs on an interval until you stop it
@@ -113,8 +123,8 @@ Escape                    # stop loop
 ```
 
 ---
-
-## Worktrees
+## Run parallel work with worktrees
+---
 
 **When:** running multiple Claude agents on the same codebase in parallel
 **How:** each agent gets its own independent file tree — no conflicts
@@ -125,5 +135,17 @@ Escape                    # stop loop
 > Add `.worktreeinclude` at repo root to copy git-ignored files (e.g. `.env`) into each worktree
 
 ---
+## Putting it together
+---
+Handling long Claude Code sessions comes down to a handful of habits:
+
+Scope your work first, then steer.
+Direct your compaction so the summary keeps what matters.
+Use the rewind menu to course correct when Claude drifts.
+Set a goal when you can describe "done" better than you can describe the steps.
+Run parallel work in worktrees.
+Do that, and you can trust a long run without babysitting every step of it.
+
+
 
 *Last updated: July 2026*
