@@ -47,7 +47,13 @@ claude --version          # check installed version
 > 💡 Best practice: start in **Plan** mode to review what Claude intends to do, then switch to **Auto** or **Manual** to execute
 ---
 
+<div align="center" style="background-color: #1a1a2e; padding: 20px; border-radius: 10px; border: 2px solid #e67e22;">
 
+# Steering Long Sessions
+
+</div>
+
+---
 
 ---
 ## Scope the work first with plan mode
