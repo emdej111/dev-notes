@@ -277,9 +277,9 @@ Do that, and you can trust a long run without babysitting every step of it.
 
 ## CLAUDE.md — A File Claude Actually Follows
 
-**What it is:** a text file you place in the root of your project. Claude Code automatically reads it every time you start it in that folder — like an onboarding document for a new employee: "this is how we do things here."
+**What it is:** a text file we place in the root of our project. Claude Code automatically reads it every time we start it in that folder — like an onboarding document for a new employee: "this is how we do things here."
 
-**What it does:** tells Claude how your project is organised, what conventions to follow, and what it should and shouldn't do — without you having to explain it every single session.
+**What it does:** tells Claude how our project is organised, what conventions to follow, and what it should and shouldn't do — without us having to explain it every single session.
 
 **Example CLAUDE.md for a rental platform project:**
 ```markdown
