@@ -302,7 +302,7 @@ Do that, and you can trust a long run without babysitting every step of it.
 
 Before writing a rule, ask: is this guidance or a hard line that must never be crossed? Those are two different jobs.
 
-**Example:** "Never push to main" sounds like a CLAUDE.md rule. But if you put it there, you're hoping Claude reads it and respects it — most of the time it will. "Most of the time" isn't good enough for something that dangerous. That belongs in a hook instead.
+**Example:** "Never push to main" sounds like a CLAUDE.md rule. But if we u put it there, we're hoping Claude reads it and respects it — most of the time it will. "Most of the time" isn't good enough for something that dangerous. That belongs in a hook instead.
 
 A **hook** is code that runs before Claude takes an action and can actually block it. So even if Claude tries to push to main, the hook stops it. That's real enforcement, not a polite request.
 
@@ -331,7 +331,7 @@ CLAUDE.md isn't just one file — there are four places it can live, and Claude 
 | **Local** | You | No — git ignored | Personal notes for this one repo only — won't affect teammates |
 
 **Example of when to use Local:**
-You are refactoring on your own branch and want Claude to remember some architectural decisions while you work. That doesn't belong in the shared project file — it would affect your whole team. It goes in Local, where it's just yours.
+We are refactoring on our own branch and want Claude to remember some architectural decisions while we work. That doesn't belong in the shared project file — it would affect our whole team. It goes in Local, where it's just ours.
 
 > 💡 Local is easy to overlook but really handy for personal, branch-specific context
 
@@ -339,7 +339,7 @@ You are refactoring on your own branch and want Claude to remember some architec
 
 ### Split big files with imports
 
-When your project CLAUDE.md gets long, break it into pieces using the import syntax:
+When our project CLAUDE.md gets long, break it into pieces using the import syntax:
 
 ```bash
 @.claude/conventions/code-style.md
@@ -347,7 +347,7 @@ When your project CLAUDE.md gets long, break it into pieces using the import syn
 @.claude/conventions/workflow.md
 ```
 
-Instead of one wall of text, you point to other files. Claude expands them inline when it launches.
+Instead of one wall of text, ww point to other files. Claude expands them inline when it launches.
 
 > ⚠️ Imports help you **organise** — they do NOT reduce context. Claude still loads everything upfront. Use imports to organise, not to shrink the load.
 
@@ -355,10 +355,10 @@ Instead of one wall of text, you point to other files. Claude expands them inlin
 
 ### How to write rules that stick
 
-Once you decide a rule belongs in CLAUDE.md, whether Claude actually follows it comes down to how you phrase it. Most rules fail because they are vague.
+Once we decide a rule belongs in CLAUDE.md, whether Claude actually follows it comes down to how we phrase it. Most rules fail because they are vague.
 
 **Be specific and checkable**
 
-If you can't check whether a rule was followed, neither can Claude.
+If we can't check whether a rule was followed, neither can Claude.
 
 ❌ Vague — what does "best practices" even mean?
