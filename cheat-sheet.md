@@ -270,9 +270,95 @@ Do that, and you can trust a long run without babysitting every step of it.
 
 <div align="center" style="background-color: #1a1a2e; padding: 20px; border-radius: 10px; border: 2px solid #e67e22;">
 
-# A CLAUDE.md That Follows
+# A CLAUDE.md That ActuallyFollows
 
 </div>
+---
 
+## CLAUDE.md — A File Claude Actually Follows
 
-*Last updated: July 2026*
+**What it is:** a text file you place in the root of your project. Claude Code automatically reads it every time you start it in that folder — like an onboarding document for a new employee: "this is how we do things here."
+
+**What it does:** tells Claude how your project is organised, what conventions to follow, and what it should and shouldn't do — without you having to explain it every single session.
+
+**Example CLAUDE.md for a rental platform project:**
+```markdown
+# Project Rules
+
+- This is a Croatian apartment rental platform
+- Backend is FastAPI + Python, frontend is React Native + Expo
+- Put new API routes in src/api/handlers, one per file
+- Use named exports, not default exports
+- All comments must be in English
+```
+
+**Key insight:** CLAUDE.md is not enforced configuration — it's guidance. Every line competes with every other line for Claude's attention. The longer the file, the more it competes with itself, and the less reliably Claude follows any single rule.
+
+> 💡 The leaner the file, the more of it Claude actually follows. The goal isn't to write down everything — it's to keep the file tight.
+
+---
+
+### CLAUDE.md vs Hooks — know the difference
+
+Before writing a rule, ask: is this guidance or a hard line that must never be crossed? Those are two different jobs.
+
+**Example:** "Never push to main" sounds like a CLAUDE.md rule. But if you put it there, you're hoping Claude reads it and respects it — most of the time it will. "Most of the time" isn't good enough for something that dangerous. That belongs in a hook instead.
+
+A **hook** is code that runs before Claude takes an action and can actually block it. So even if Claude tries to push to main, the hook stops it. That's real enforcement, not a polite request.
+
+| | CLAUDE.md | Hooks |
+|---|---|---|
+| **Type** | Guidance | Enforcement |
+| **How it works** | Claude reads and tries to follow | Code that runs before Claude acts |
+| **Can block actions?** | No — Claude can ignore it | Yes — physically stops the action |
+| **Use for** | Conventions, style, preferences | Hard rules that must never be broken |
+
+**Rule of thumb:**
+- "Use named exports" → CLAUDE.md ✅ — soft convention, fine as guidance
+- "Never push to main" → Hook ✅ — too dangerous to leave as a polite request
+
+---
+
+### The four locations
+
+CLAUDE.md isn't just one file — there are four places it can live, and Claude loads all of them together at launch. They stack — nothing gets dropped.
+
+| Location | Who controls it | Shared with team? | When to use |
+|----------|----------------|-------------------|-------------|
+| **Managed policy** | Platform/org team | Always active | Org-wide rules you can't exclude — always in play |
+| **User** | You | No — follows you everywhere | Personal preferences that apply across all your projects on this machine |
+| **Project** | Team | Yes — checked into repo | Shared conventions your whole team follows |
+| **Local** | You | No — git ignored | Personal notes for this one repo only — won't affect teammates |
+
+**Example of when to use Local:**
+You are refactoring on your own branch and want Claude to remember some architectural decisions while you work. That doesn't belong in the shared project file — it would affect your whole team. It goes in Local, where it's just yours.
+
+> 💡 Local is easy to overlook but really handy for personal, branch-specific context
+
+---
+
+### Split big files with imports
+
+When your project CLAUDE.md gets long, break it into pieces using the import syntax:
+
+```bash
+@.claude/conventions/code-style.md
+@.claude/conventions/testing.md
+@.claude/conventions/workflow.md
+```
+
+Instead of one wall of text, you point to other files. Claude expands them inline when it launches.
+
+> ⚠️ Imports help you **organise** — they do NOT reduce context. Claude still loads everything upfront. Use imports to organise, not to shrink the load.
+
+---
+
+### How to write rules that stick
+
+Once you decide a rule belongs in CLAUDE.md, whether Claude actually follows it comes down to how you phrase it. Most rules fail because they are vague.
+
+**Be specific and checkable**
+
+If you can't check whether a rule was followed, neither can Claude.
+
+❌ Vague — what does "best practices" even mean?
