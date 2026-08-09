@@ -21,16 +21,16 @@
 | **Manual** | `⏸ manual mode on` | Claude asks permission before every action | Sensitive code, unfamiliar codebase |
 
 ### Accept edits
-![Accept edits mode](../assets/mode-accept-edits.jpeg)
+![Accept edits mode](../assets/screenshots/ode-accept-edits.jpeg)
 
 ### Plan
-![Plan mode](../assets/mode-plan.jpeg)
+![Plan mode](../assets/screenshots/mode-plan.jpeg)
 
 ### Auto
-![Auto mode](../assets/mode-auto.jpeg)
+![Auto mode](../assets/screenshots/mode-auto.jpeg)
 
 ### Manual
-![Manual mode](../assets/mode-manual.jpeg)
+![Manual mode](../assets/screenshots/mode-manual.jpeg)
 
 > 💡 Best practice: start in **Plan** mode to review what Claude intends to do, then switch to **Auto** or **Manual** to execute
 
