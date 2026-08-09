@@ -391,11 +391,9 @@ Think of it like this:
 Claude reads CLAUDE.md → sees @testing.md → loads it only when needed
 
 
-
 ✅ What actually happens:
 
 Claude reads CLAUDE.md → immediately opens testing.md → pastes everything inline → reads it all at once
-
 
 
 So the total amount of text Claude reads is exactly the same — whether we have one big file or ten small ones. Splitting into imports does not make Claude faster or reduce its memory load.
@@ -407,3 +405,112 @@ So the total amount of text Claude reads is exactly the same — whether we have
 ❌ Don't use imports to **shrink the load** — Claude reads everything regardless
 
 > 💡 Imports are for our benefit, not Claude's — they help us maintain the file, but Claude sees the same amount of text either way
+
+### Phrasing is what makes rules stick
+
+Once we decide a rule belongs in CLAUDE.md, whether Claude actually follows it comes down to how we phrase it. Most rules fail because they are vague — if we can't check whether a rule was followed, neither can Claude.
+
+---
+
+#### Be specific and checkable
+
+Ask yourself: can I look at the result and immediately tell if this rule was followed?
+
+❌ Vague — what does "best practices" even mean?
+
+Follow best practices for API routes.
+
+✅ Specific — we can immediately verify this:
+
+Put new API routes in src/api/handlers, one per file.
+
+The second one is explicit. We look at the folder, we see one file per route — done or not done. That's the bar every rule should clear.
+
+---
+
+#### Name the replacement — don't just ban something
+
+When we tell Claude not to do something, always say what to do instead. Otherwise we have left the door open.
+
+❌ Leaves it open — okay, but then what?
+Don't use default exports.
+
+
+✅ Closes it — no room for misinterpretation:
+
+Use named exports, not default exports.
+
+
+The second version names the replacement, so there is nothing left to guess.
+
+---
+
+#### Emphasis is a budget
+
+Words like `IMPORTANT` and `YOU MUST` do raise a rule's priority — but only relative to everything quieter around them.
+
+**The problem:** if every rule shouts, nothing stands out. The emphasis loses all meaning.
+
+Think of it like this — if our CLAUDE.md looks like this:
+
+IMPORTANT: Use named exports
+YOU MUST: Put routes in src/api/handlers
+IMPORTANT: Write tests for every feature
+YOU MUST: Never use console.log in production
+IMPORTANT: All comments in English
+
+
+Claude sees five things shouting at equal volume. Nothing is actually prioritised.
+
+✅ Better approach — save emphasis for what really hurts:
+
+Use named exports, not default exports.
+Put new API routes in src/api/handlers, one per file.
+Write tests for every new feature.
+All comments must be in English.
+
+YOU MUST: Never log sensitive data like passwords or tokens.
+
+
+Now only one rule shouts — and Claude knows that one actually matters.
+
+> 💡 Treat emphasis like a budget. Spend it on the 2-3 rules that hurt most when broken. Let the rest sit at normal volume.
+
+---
+
+#### Keep the file under revision
+
+CLAUDE.md is never finished — treat it like living code that keeps getting edited.
+
+**When Claude does something wrong:**
+- Don't just fix it by hand and move on
+- Treat it as a bug report against your CLAUDE.md
+- Ask yourself: "why didn't my rules prevent this?"
+- Add or improve the rule that should have caught it
+
+**Shortcut:** tell Claude directly:
+
+Add that to the CLAUDE.md file
+
+Claude will write the rule for us. That way the file gets better every time something goes wrong.
+
+---
+
+### Bottom line
+
+Treat CLAUDE.md like production code. If we can't justify a line, delete it.
+
+| Rule | Why it matters |
+|------|----------------|
+| Move hard rules to **hooks** | Real enforcement — Claude physically can't break them |
+| Organize with **imports** | Keeps the file readable — but remember, context doesn't shrink |
+| Make rules **specific and checkable** | If we can't verify it, Claude can't either |
+| **Name the replacement** | Don't just ban — say what to do instead |
+| Treat emphasis as a **budget** | Spend it on what hurts most |
+| **Keep revising** | Every mistake Claude makes is a bug report |
+
+> 💡 The whole idea is simple: the leaner the file, the more of it Claude follows.
+
+---
+
+
