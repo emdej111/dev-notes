@@ -348,32 +348,60 @@ We don't want these notes in the Project file — they would confuse our teammat
 
 Local is the answer. It's just ours, just for this repo, and disappears from Claude's view the moment someone else opens the same project on their machine.
 
-> 💡 Think of Local as a sticky note on our own desk — no one else sees it, and it doesn't end up in the shared office manual
+> 💡 Think of Local as a sticky note on your own desk — no one else sees it, and it doesn't end up in the shared office manual
 
 ---
 
 ### Split big files with imports
 
-When our project CLAUDE.md gets long, break it into pieces using the import syntax:
+As your project grows, your CLAUDE.md can get very long. Instead of one giant wall of text, you can split it into multiple smaller files and reference them from the main CLAUDE.md using the `@` import syntax:
 
-```bash
+**Main CLAUDE.md:**
+```markdown
+# Project Rules
+
 @.claude/conventions/code-style.md
 @.claude/conventions/testing.md
 @.claude/conventions/workflow.md
 ```
 
-Instead of one wall of text, ww point to other files. Claude expands them inline when it launches.
+**Each imported file contains its own section:**
+```markdown
+# code-style.md
+- Use named exports, not default exports
+- Put new API routes in src/api/handlers, one per file
+```
 
-> ⚠️ Imports help you **organise** — they do NOT reduce context. Claude still loads everything upfront. Use imports to organise, not to shrink the load.
+```markdown
+# testing.md
+- All new features must have tests
+- Run tests before every commit
+```
 
----
+This way your main CLAUDE.md stays short and readable — instead of scrolling through 200 lines, you have a clean list of references.
 
-### How to write rules that stick
+**The important thing to understand — imports do NOT reduce context**
 
-Once we decide a rule belongs in CLAUDE.md, whether Claude actually follows it comes down to how we phrase it. Most rules fail because they are vague.
+When Claude launches, it reads the main CLAUDE.md and immediately expands every `@` import inline — like copy-pasting the content of each file right where you referenced it.
 
-**Be specific and checkable**
+Think of it like this:
 
-If we can't check whether a rule was followed, neither can Claude.
+❌ What you might think happens:
 
-❌ Vague — what does "best practices" even mean?
+Claude reads CLAUDE.md → sees @testing.md → loads it only when needed
+
+
+✅ What actually happens:
+
+Claude reads CLAUDE.md → immediately opens testing.md → pastes everything inline → reads it all at once
+
+
+So the total amount of text Claude reads is exactly the same — whether you have one big file or ten small ones. Splitting into imports does not make Claude faster or reduce its memory load.
+
+**When to use imports:**
+
+✅ Use imports to **organise** — makes the file easier for humans to read and maintain
+
+❌ Don't use imports to **shrink the load** — Claude reads everything regardless
+
+> 💡 Imports are for your benefit, not Claude's — they help you maintain the file, but Claude sees the same amount of text either way
