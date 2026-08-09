@@ -354,7 +354,7 @@ Local is the answer. It's just ours, just for this repo, and disappears from Cla
 
 ### Split big files with imports
 
-As your project grows, your CLAUDE.md can get very long. Instead of one giant wall of text, you can split it into multiple smaller files and reference them from the main CLAUDE.md using the `@` import syntax:
+As our project grows, our CLAUDE.md can get very long. Instead of one giant wall of text, we can split it into multiple smaller files and reference them from the main CLAUDE.md using the `@` import syntax:
 
 **Main CLAUDE.md:**
 ```markdown
@@ -378,17 +378,18 @@ As your project grows, your CLAUDE.md can get very long. Instead of one giant wa
 - Run tests before every commit
 ```
 
-This way your main CLAUDE.md stays short and readable — instead of scrolling through 200 lines, you have a clean list of references.
+This way our main CLAUDE.md stays short and readable — instead of scrolling through 200 lines,we have a clean list of references.
 
 **The important thing to understand — imports do NOT reduce context**
 
-When Claude launches, it reads the main CLAUDE.md and immediately expands every `@` import inline — like copy-pasting the content of each file right where you referenced it.
+When Claude launches, it reads the main CLAUDE.md and immediately expands every `@` import inline — like copy-pasting the content of each file right where we referenced it.
 
 Think of it like this:
 
-❌ What you might think happens:
+❌ What we might think happens:
 
 Claude reads CLAUDE.md → sees @testing.md → loads it only when needed
+
 
 
 ✅ What actually happens:
@@ -396,12 +397,13 @@ Claude reads CLAUDE.md → sees @testing.md → loads it only when needed
 Claude reads CLAUDE.md → immediately opens testing.md → pastes everything inline → reads it all at once
 
 
-So the total amount of text Claude reads is exactly the same — whether you have one big file or ten small ones. Splitting into imports does not make Claude faster or reduce its memory load.
+
+So the total amount of text Claude reads is exactly the same — whether we have one big file or ten small ones. Splitting into imports does not make Claude faster or reduce its memory load.
 
 **When to use imports:**
 
-✅ Use imports to **organise** — makes the file easier for humans to read and maintain
+✅ We use imports to **organise** — makes the file easier for humans to read and maintain
 
 ❌ Don't use imports to **shrink the load** — Claude reads everything regardless
 
-> 💡 Imports are for your benefit, not Claude's — they help you maintain the file, but Claude sees the same amount of text either way
+> 💡 Imports are for our benefit, not Claude's — they help us maintain the file, but Claude sees the same amount of text either way
