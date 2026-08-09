@@ -208,7 +208,7 @@ Now only one rule shouts — and Claude knows that one actually matters.
 
 ---
 
-#### Keep the file under revision
+### Keep the file under revision
 
 CLAUDE.md is never finished — treat it like living code that keeps getting edited.
 
