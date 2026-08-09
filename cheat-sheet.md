@@ -330,25 +330,25 @@ CLAUDE.md isn't just one file — there are four places it can live, and Claude 
 | **Project** | Team | Yes — checked into repo | Shared conventions your whole team follows |
 | **Local** | You | No — git ignored | Personal notes for this one repo only — won't affect teammates |
 
-**Managed policy** — your organisation's rules. You can't turn it off. If your company says "never log passwords," that's here.
+**Managed policy** — our organisation's rules. We can't turn it off. If our company says "never log passwords," that's here.
 
-**User** — your personal style. If you always want Claude to write comments in English, put it here once and it applies to every project on your machine automatically.
+**User** — our personal style. If we always want Claude to write comments in English, we put it here once and it applies to every project on our machine automatically.
 
-**Project** — the team file. Checked into git so everyone gets it. If your team agreed "all API routes go in src/api/handlers" — this is where that lives.
+**Project** — the team file. Checked into git so everyone gets it. If our team agreed "all API routes go in src/api/handlers" — this is where that lives.
 
-**Local** — your private scratchpad for one repo. Git ignores it completely so it never gets pushed or shared.
+**Local** — our private scratchpad for one repo. Git ignores it completely so it never gets pushed or shared.
 
 **When is Local useful?**
 
-Imagine you are working on your own branch, refactoring a big feature. You want Claude to remember:
+Imagine we are working on our own branch, refactoring a big feature. We want Claude to remember:
 - "We decided to split this service into two separate modules"
 - "Don't touch the payment logic — it's being rewritten separately"
 
-You don't want these notes in the Project file — they would confuse your teammates who are not on your branch. You don't want them in User — they only apply to this one repo.
+We don't want these notes in the Project file — they would confuse our teammates who are not on our branch. We don't want them in User — they only apply to this one repo.
 
-Local is the answer. It's just yours, just for this repo, and disappears from Claude's view the moment someone else opens the same project on their machine.
+Local is the answer. It's just ours, just for this repo, and disappears from Claude's view the moment someone else opens the same project on their machine.
 
-> 💡 Think of Local as a sticky note on your own desk — no one else sees it, and it doesn't end up in the shared office manual
+> 💡 Think of Local as a sticky note on our own desk — no one else sees it, and it doesn't end up in the shared office manual
 
 ---
 
