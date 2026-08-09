@@ -1,4 +1,4 @@
-# Claude Code — Quick Reference ⚡
+# Claude Code — Quick Reference
 
 ---
 
