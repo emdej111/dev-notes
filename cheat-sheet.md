@@ -406,6 +406,8 @@ So the total amount of text Claude reads is exactly the same — whether we have
 
 > 💡 Imports are for our benefit, not Claude's — they help us maintain the file, but Claude sees the same amount of text either way
 
+---
+
 ### Phrasing is what makes rules stick
 
 Once we decide a rule belongs in CLAUDE.md, whether Claude actually follows it comes down to how we phrase it. Most rules fail because they are vague — if we can't check whether a rule was followed, neither can Claude.
