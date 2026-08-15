@@ -70,7 +70,7 @@ Instead of one wall of text, you point to other files. Claude expands them inlin
 
 > ⚠️ Imports help you **organise** — they do NOT reduce context. Claude still loads everything upfront. Use imports to organise, not to shrink the load.
 
-**See a real example:** [examples/claude-md-example/](examples/claude-md-example/)
+**See a real example:** [examples/claude-md-example/](examples/claude-md-example/) — or the full cumulative project at [../project-example/](../project-example/)
 
 ---
 

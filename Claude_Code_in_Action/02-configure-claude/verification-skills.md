@@ -4,6 +4,14 @@
 
 ---
 
+## Why this is the skill to build first
+
+As a project grows, the same work keeps happening over and over — and skills are the natural way to automate that repetition. Out of everything worth turning into a skill, **verifying your own work** is the one to build first.
+
+The reason is simple: verification is the check you're most likely to skip, and the one that costs the most when you do.
+
+---
+
 ## The problem with manual verification
 
 When Claude finishes a task, you have to remember to check the work. Ask it to run tests. Read the diff yourself. The problem: **the checking depends on you remembering to ask**. Skip that step once and bad code slips through.
@@ -37,6 +45,8 @@ A skill is a folder with a `skill.md` inside it:
 ├── reference.md   # detailed material — only loaded when needed
 └── check.sh       # executable script — Claude runs it, doesn't load it
 ```
+
+**See a real example:** [examples/skill-example/](examples/skill-example/) — or the full cumulative project at [../project-example/](../project-example/)
 
 **`skill.md`** — keep this lean:
 
@@ -90,7 +100,13 @@ ruff check src/
 
 ## Which instruction surface owns which rule
 
-You now have three places to put instructions. Here is how to keep them straight:
+You now have three places to put instructions, and it's easy to mix them up. Here's how to keep them straight.
+
+**CLAUDE.md** holds conventions that apply all the time, regardless of what task is at hand — naming rules, where files go, how commits are written. This is the "always true" layer.
+
+**Skills** hold procedures and reference material tied to a *specific kind of task* — verification, a release checklist, a migration recipe. A skill only becomes relevant when that kind of task comes up, which is exactly why its description is what triggers it.
+
+**Hooks** are the odd one out, and the distinction matters: CLAUDE.md and skills are both *instructions that Claude follows* — Claude can, in principle, misread them, forget them, or decide they don't apply. A hook is *code that actually runs*, outside of Claude's judgment entirely. If a rule must never be skippable, it doesn't belong in CLAUDE.md or in a skill — it belongs in a hook.
 
 | Surface | What belongs here | Can Claude skip it? |
 |---------|------------------|---------------------|
