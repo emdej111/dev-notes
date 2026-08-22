@@ -13,10 +13,10 @@ Notes following the [Claude Code in Action](https://anthropic.skilljar.com/claud
 - **Steer the work**
   - [Steering Long Sessions](Claude_Code_in_Action/01-steer-the-work/steering-long-sessions.md)
 - **Configure Claude**
-  - [A CLAUDE.md That Follows](Claude_Code_in_Action/02-configure-claude/claude-md-that-follows.md)
-  - [Verification Skills](Claude_Code_in_Action/02-configure-claude/verification-skills.md)
-  - [Permission Modes](Claude_Code_in_Action/02-configure-claude/permission-modes.md)
-  - [Hooks](Claude_Code_in_Action/02-configure-claude/hooks.md)
+  - [A CLAUDE.md That Follows](Claude_Code_in_Action/02-configure-claude/claude-md-that-follows/claude-md-that-follows.md)
+  - [Verification Skills](Claude_Code_in_Action/02-configure-claude/verification-skills/verification-skills.md)
+  - [Permission Modes](Claude_Code_in_Action/02-configure-claude/permission-modes/permission-modes.md)
+  - [Hooks](Claude_Code_in_Action/02-configure-claude/hooks/hooks.md)
 - **Automate repeat work**
   - [Routines and Headless](Claude_Code_in_Action/03-automate-repeat-work/routines-and-headless.md)
   - [GitHub Actions and Code Review](Claude_Code_in_Action/03-automate-repeat-work/github-actions.md)

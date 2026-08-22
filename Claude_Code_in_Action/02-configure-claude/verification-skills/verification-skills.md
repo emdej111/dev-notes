@@ -46,7 +46,7 @@ A skill is a folder with a `skill.md` inside it:
 └── check.sh       # executable script — Claude runs it, doesn't load it
 ```
 
-**See a real example:** [examples/skill-example/](examples/skill-example/) — or the full cumulative project at [../project-example/](../project-example/)
+**See a real example:** [examples/skill-example/](examples/skill-example/) — or the full cumulative project at [../../project-example/](../../project-example/)
 
 **`skill.md`** — keep this lean:
 

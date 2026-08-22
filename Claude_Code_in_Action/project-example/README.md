@@ -2,7 +2,7 @@
 
 This folder is not tied to a single lesson. It's the same Roofy project (FastAPI + Python backend, React Native + Expo frontend, PostgreSQL + Supabase) carried across the whole course, growing one lesson at a time.
 
-Each per-lesson example under `02-configure-claude/examples/` shows one piece in isolation (`claude-md-example/`, `skill-example/`, ...). This folder shows how those pieces sit together in one real project once you've been through the lessons that produced them.
+Each per-lesson example lives next to the lesson that produced it — `02-configure-claude/claude-md-that-follows/examples/claude-md-example/`, `02-configure-claude/verification-skills/examples/skill-example/`, ... — and shows one piece in isolation. This folder shows how those pieces sit together in one real project once you've been through the lessons that produced them.
 
 ## What's here so far
 
